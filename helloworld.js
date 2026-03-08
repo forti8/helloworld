@@ -21,7 +21,7 @@
     supabase
       .from("Cookie")
       .insert({
-        text: c;
+        text: c,
         created_at: new Date()
       });
 
